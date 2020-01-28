@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // As informações gerais sobre um assembly são controladas por
 // conjunto de atributos. Altere estes valores de atributo para modificar as informações
 // associadas a um assembly.
-[assembly: AssemblyTitle("SenacRodaRoda")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("Roda a Roda - Senac Bebedouro")]
+[assembly: AssemblyDescription("O jogo mais famoso da TV agora no seu computador.")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("SenacRodaRoda")]
+[assembly: AssemblyCompany("Senac Bebedouro")]
+[assembly: AssemblyProduct("Jogo Roda a Roda")]
 [assembly: AssemblyCopyright("Copyright ©  2020")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
