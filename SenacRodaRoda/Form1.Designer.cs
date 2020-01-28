@@ -46,12 +46,7 @@
          this.btnP = new System.Windows.Forms.Button();
          this.timer1 = new System.Windows.Forms.Timer(this.components);
          this.btnC = new System.Windows.Forms.Button();
-         this.label1 = new System.Windows.Forms.Label();
          this.pcbGif = new System.Windows.Forms.PictureBox();
-         this.lblErro = new System.Windows.Forms.Label();
-         this.lblPlacar = new System.Windows.Forms.Label();
-         this.label2 = new System.Windows.Forms.Label();
-         this.label3 = new System.Windows.Forms.Label();
          this.panel = new System.Windows.Forms.Panel();
          this.pnlPainelLetrasB = new System.Windows.Forms.Panel();
          this.blcB11 = new System.Windows.Forms.Label();
@@ -97,6 +92,16 @@
          this.btnE = new System.Windows.Forms.Button();
          this.btnG = new System.Windows.Forms.Button();
          this.btnD = new System.Windows.Forms.Button();
+         this.pcbErro1 = new System.Windows.Forms.PictureBox();
+         this.pcbErro2 = new System.Windows.Forms.PictureBox();
+         this.pcbErro3 = new System.Windows.Forms.PictureBox();
+         this.panel1 = new System.Windows.Forms.Panel();
+         this.lblPlacar = new System.Windows.Forms.Label();
+         this.label3 = new System.Windows.Forms.Label();
+         this.label5 = new System.Windows.Forms.Label();
+         this.label6 = new System.Windows.Forms.Label();
+         this.pictureBox1 = new System.Windows.Forms.PictureBox();
+         this.lblGirar = new System.Windows.Forms.Label();
          ((System.ComponentModel.ISupportInitialize)(this.pcbLogo)).BeginInit();
          this.pnlRoleta.SuspendLayout();
          ((System.ComponentModel.ISupportInitialize)(this.pcbGif)).BeginInit();
@@ -105,6 +110,11 @@
          this.pnlPainelLetrasA.SuspendLayout();
          ((System.ComponentModel.ISupportInitialize)(this.pcbPainel)).BeginInit();
          this.pnlTeclado.SuspendLayout();
+         ((System.ComponentModel.ISupportInitialize)(this.pcbErro1)).BeginInit();
+         ((System.ComponentModel.ISupportInitialize)(this.pcbErro2)).BeginInit();
+         ((System.ComponentModel.ISupportInitialize)(this.pcbErro3)).BeginInit();
+         this.panel1.SuspendLayout();
+         ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
          this.SuspendLayout();
          // 
          // btnB
@@ -240,7 +250,7 @@
          this.lblValorSorteado.BackColor = System.Drawing.Color.White;
          this.lblValorSorteado.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
          this.lblValorSorteado.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-         this.lblValorSorteado.Location = new System.Drawing.Point(181, 26);
+         this.lblValorSorteado.Location = new System.Drawing.Point(238, 24);
          this.lblValorSorteado.Name = "lblValorSorteado";
          this.lblValorSorteado.Size = new System.Drawing.Size(275, 40);
          this.lblValorSorteado.TabIndex = 1;
@@ -251,9 +261,9 @@
          this.pcbLogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(173)))), ((int)(((byte)(191)))));
          this.pcbLogo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pcbLogo.BackgroundImage")));
          this.pcbLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-         this.pcbLogo.Location = new System.Drawing.Point(1046, 6);
+         this.pcbLogo.Location = new System.Drawing.Point(1103, 12);
          this.pcbLogo.Name = "pcbLogo";
-         this.pcbLogo.Size = new System.Drawing.Size(214, 140);
+         this.pcbLogo.Size = new System.Drawing.Size(214, 147);
          this.pcbLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
          this.pcbLogo.TabIndex = 13;
          this.pcbLogo.TabStop = false;
@@ -265,19 +275,19 @@
          this.pnlRoleta.Controls.Add(this.btnGirar);
          this.pnlRoleta.Location = new System.Drawing.Point(785, 453);
          this.pnlRoleta.Name = "pnlRoleta";
-         this.pnlRoleta.Size = new System.Drawing.Size(466, 94);
+         this.pnlRoleta.Size = new System.Drawing.Size(542, 94);
          this.pnlRoleta.TabIndex = 12;
          // 
          // btnGirar
          // 
          this.btnGirar.BackColor = System.Drawing.Color.Yellow;
          this.btnGirar.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-         this.btnGirar.Location = new System.Drawing.Point(13, 25);
+         this.btnGirar.Location = new System.Drawing.Point(28, 24);
          this.btnGirar.Name = "btnGirar";
-         this.btnGirar.Size = new System.Drawing.Size(160, 42);
+         this.btnGirar.Size = new System.Drawing.Size(190, 42);
          this.btnGirar.TabIndex = 0;
          this.btnGirar.TabStop = false;
-         this.btnGirar.Text = "Girar Roleta";
+         this.btnGirar.Text = "Girar";
          this.btnGirar.UseVisualStyleBackColor = false;
          // 
          // btnW
@@ -332,64 +342,16 @@
          this.btnC.UseVisualStyleBackColor = false;
          this.btnC.Click += new System.EventHandler(this.btnC_Click);
          // 
-         // label1
-         // 
-         this.label1.AutoSize = true;
-         this.label1.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-         this.label1.Location = new System.Drawing.Point(792, 28);
-         this.label1.Name = "label1";
-         this.label1.Size = new System.Drawing.Size(143, 29);
-         this.label1.TabIndex = 6;
-         this.label1.Text = "Pontuação:";
-         // 
          // pcbGif
          // 
-         this.pcbGif.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(173)))), ((int)(((byte)(191)))));
+         this.pcbGif.BackColor = System.Drawing.Color.Transparent;
          this.pcbGif.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-         this.pcbGif.Location = new System.Drawing.Point(879, 178);
+         this.pcbGif.Location = new System.Drawing.Point(1060, 253);
          this.pcbGif.Name = "pcbGif";
-         this.pcbGif.Size = new System.Drawing.Size(298, 252);
+         this.pcbGif.Size = new System.Drawing.Size(253, 194);
          this.pcbGif.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
          this.pcbGif.TabIndex = 14;
          this.pcbGif.TabStop = false;
-         // 
-         // lblErro
-         // 
-         this.lblErro.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-         this.lblErro.Location = new System.Drawing.Point(941, 95);
-         this.lblErro.Name = "lblErro";
-         this.lblErro.Size = new System.Drawing.Size(25, 28);
-         this.lblErro.TabIndex = 7;
-         this.lblErro.Text = "0";
-         // 
-         // lblPlacar
-         // 
-         this.lblPlacar.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-         this.lblPlacar.Location = new System.Drawing.Point(941, 29);
-         this.lblPlacar.Name = "lblPlacar";
-         this.lblPlacar.Size = new System.Drawing.Size(99, 28);
-         this.lblPlacar.TabIndex = 8;
-         this.lblPlacar.Text = "0";
-         // 
-         // label2
-         // 
-         this.label2.AutoSize = true;
-         this.label2.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-         this.label2.Location = new System.Drawing.Point(792, 94);
-         this.label2.Name = "label2";
-         this.label2.Size = new System.Drawing.Size(150, 29);
-         this.label2.TabIndex = 9;
-         this.label2.Text = "Nº de Erros:";
-         // 
-         // label3
-         // 
-         this.label3.AutoSize = true;
-         this.label3.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-         this.label3.Location = new System.Drawing.Point(963, 95);
-         this.label3.Name = "label3";
-         this.label3.Size = new System.Drawing.Size(59, 27);
-         this.label3.TabIndex = 10;
-         this.label3.Text = "de 7";
          // 
          // panel
          // 
@@ -985,20 +947,130 @@
          this.btnD.UseVisualStyleBackColor = false;
          this.btnD.Click += new System.EventHandler(this.btnD_Click);
          // 
+         // pcbErro1
+         // 
+         this.pcbErro1.BackColor = System.Drawing.Color.Transparent;
+         this.pcbErro1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+         this.pcbErro1.Location = new System.Drawing.Point(801, 170);
+         this.pcbErro1.Name = "pcbErro1";
+         this.pcbErro1.Size = new System.Drawing.Size(93, 77);
+         this.pcbErro1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+         this.pcbErro1.TabIndex = 14;
+         this.pcbErro1.TabStop = false;
+         // 
+         // pcbErro2
+         // 
+         this.pcbErro2.BackColor = System.Drawing.Color.Transparent;
+         this.pcbErro2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+         this.pcbErro2.Location = new System.Drawing.Point(896, 170);
+         this.pcbErro2.Name = "pcbErro2";
+         this.pcbErro2.Size = new System.Drawing.Size(93, 77);
+         this.pcbErro2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+         this.pcbErro2.TabIndex = 14;
+         this.pcbErro2.TabStop = false;
+         // 
+         // pcbErro3
+         // 
+         this.pcbErro3.BackColor = System.Drawing.Color.Transparent;
+         this.pcbErro3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+         this.pcbErro3.Location = new System.Drawing.Point(991, 170);
+         this.pcbErro3.Name = "pcbErro3";
+         this.pcbErro3.Size = new System.Drawing.Size(93, 77);
+         this.pcbErro3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+         this.pcbErro3.TabIndex = 14;
+         this.pcbErro3.TabStop = false;
+         // 
+         // panel1
+         // 
+         this.panel1.BackColor = System.Drawing.Color.Yellow;
+         this.panel1.Controls.Add(this.lblPlacar);
+         this.panel1.Controls.Add(this.label6);
+         this.panel1.Controls.Add(this.label3);
+         this.panel1.Controls.Add(this.label5);
+         this.panel1.Location = new System.Drawing.Point(815, 12);
+         this.panel1.Name = "panel1";
+         this.panel1.Size = new System.Drawing.Size(253, 119);
+         this.panel1.TabIndex = 15;
+         // 
+         // lblPlacar
+         // 
+         this.lblPlacar.BackColor = System.Drawing.Color.Yellow;
+         this.lblPlacar.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+         this.lblPlacar.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+         this.lblPlacar.ForeColor = System.Drawing.Color.Red;
+         this.lblPlacar.Location = new System.Drawing.Point(14, 11);
+         this.lblPlacar.Name = "lblPlacar";
+         this.lblPlacar.Size = new System.Drawing.Size(224, 49);
+         this.lblPlacar.TabIndex = 1;
+         this.lblPlacar.Text = "9000";
+         this.lblPlacar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+         // 
+         // label3
+         // 
+         this.label3.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+         this.label3.Location = new System.Drawing.Point(42, 76);
+         this.label3.Name = "label3";
+         this.label3.Size = new System.Drawing.Size(108, 29);
+         this.label3.TabIndex = 6;
+         this.label3.Text = "Rodada:";
+         // 
+         // label5
+         // 
+         this.label5.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+         this.label5.ForeColor = System.Drawing.Color.Red;
+         this.label5.Location = new System.Drawing.Point(146, 76);
+         this.label5.Name = "label5";
+         this.label5.Size = new System.Drawing.Size(25, 29);
+         this.label5.TabIndex = 8;
+         this.label5.Text = "1";
+         this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+         // 
+         // label6
+         // 
+         this.label6.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+         this.label6.Location = new System.Drawing.Point(167, 76);
+         this.label6.Name = "label6";
+         this.label6.Size = new System.Drawing.Size(43, 29);
+         this.label6.TabIndex = 6;
+         this.label6.Text = "/ 5";
+         // 
+         // pictureBox1
+         // 
+         this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+         this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+         this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+         this.pictureBox1.Location = new System.Drawing.Point(786, 331);
+         this.pictureBox1.Name = "pictureBox1";
+         this.pictureBox1.Size = new System.Drawing.Size(267, 114);
+         this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+         this.pictureBox1.TabIndex = 14;
+         this.pictureBox1.TabStop = false;
+         // 
+         // lblGirar
+         // 
+         this.lblGirar.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+         this.lblGirar.ForeColor = System.Drawing.Color.Black;
+         this.lblGirar.Location = new System.Drawing.Point(786, 299);
+         this.lblGirar.Name = "lblGirar";
+         this.lblGirar.Size = new System.Drawing.Size(267, 29);
+         this.lblGirar.TabIndex = 6;
+         this.lblGirar.Text = "Gire a roleta...";
+         // 
          // frmJogo
          // 
          this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
          this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
          this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(173)))), ((int)(((byte)(191)))));
-         this.ClientSize = new System.Drawing.Size(1267, 565);
+         this.ClientSize = new System.Drawing.Size(1339, 565);
+         this.Controls.Add(this.panel1);
          this.Controls.Add(this.pcbLogo);
+         this.Controls.Add(this.lblGirar);
          this.Controls.Add(this.pnlRoleta);
-         this.Controls.Add(this.label1);
+         this.Controls.Add(this.pcbErro3);
+         this.Controls.Add(this.pcbErro2);
+         this.Controls.Add(this.pictureBox1);
+         this.Controls.Add(this.pcbErro1);
          this.Controls.Add(this.pcbGif);
-         this.Controls.Add(this.lblErro);
-         this.Controls.Add(this.lblPlacar);
-         this.Controls.Add(this.label2);
-         this.Controls.Add(this.label3);
          this.Controls.Add(this.panel);
          this.Controls.Add(this.pnlTeclado);
          this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -1015,8 +1087,12 @@
          this.pnlPainelLetrasA.ResumeLayout(false);
          ((System.ComponentModel.ISupportInitialize)(this.pcbPainel)).EndInit();
          this.pnlTeclado.ResumeLayout(false);
+         ((System.ComponentModel.ISupportInitialize)(this.pcbErro1)).EndInit();
+         ((System.ComponentModel.ISupportInitialize)(this.pcbErro2)).EndInit();
+         ((System.ComponentModel.ISupportInitialize)(this.pcbErro3)).EndInit();
+         this.panel1.ResumeLayout(false);
+         ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
          this.ResumeLayout(false);
-         this.PerformLayout();
 
       }
 
@@ -1037,12 +1113,7 @@
       private System.Windows.Forms.Button btnP;
       private System.Windows.Forms.Timer timer1;
       private System.Windows.Forms.Button btnC;
-      private System.Windows.Forms.Label label1;
       private System.Windows.Forms.PictureBox pcbGif;
-      private System.Windows.Forms.Label lblErro;
-      private System.Windows.Forms.Label lblPlacar;
-      private System.Windows.Forms.Label label2;
-      private System.Windows.Forms.Label label3;
       private System.Windows.Forms.Panel panel;
       private System.Windows.Forms.Panel pnlTeclado;
       private System.Windows.Forms.Button btnZ;
@@ -1088,6 +1159,16 @@
       private System.Windows.Forms.Button btnE;
       private System.Windows.Forms.Button btnG;
       private System.Windows.Forms.Button btnD;
-   }
+      private System.Windows.Forms.PictureBox pcbErro1;
+      private System.Windows.Forms.PictureBox pcbErro2;
+      private System.Windows.Forms.PictureBox pcbErro3;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label lblPlacar;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label lblGirar;
+    }
 }
 

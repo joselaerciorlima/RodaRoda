@@ -7,23 +7,28 @@ namespace SenacRodaRoda
 {
    public partial class frmJogo : Form
    {
-
       //=================== VARIAVEIS GLOBAIS ====================================================
-
       string palavraSorteadaA;
+     
       char[] palavraQuebrada;
+      string[] tempPalavraA;
+
       int X;
       int Y;
+      int qtdLetras = 0;
+
       bool primeiraPalavra = true;
       bool encontrou = false;
-      Button currentButton;
 
+
+      Button currentButton;
 
       //=================== MONTAGEM DO FORMULARIO ===============================================
       public frmJogo()
       {
          InitializeComponent();
       }
+
       //======================== MÉTODOS =========================================================
       void Sorteador()
       {
@@ -35,6 +40,8 @@ namespace SenacRodaRoda
 
          palavraQuebrada = palavraSorteadaA.ToCharArray();
 
+         tempPalavraA = new string[palavraQuebrada.Length];
+
          X = 0;
          Y = 0;
 
@@ -45,8 +52,8 @@ namespace SenacRodaRoda
          }
          primeiraPalavra = false;
          lblDica.Text = palavraSorteadaA;
-
       }
+      //******************************************************************************************
       void VerificarLetra(char letra, object btnSender)
       {
          X = 0;
@@ -61,6 +68,8 @@ namespace SenacRodaRoda
                pnlPainelLetrasA.GetChildAtPoint(new Point(X, Y)).Text = letra.ToString().ToUpper();
                X += 46;
                encontrou = true;
+               tempPalavraA[i] = palavraQuebrada[i].ToString();
+               qtdLetras++;
             }
             else
             {
@@ -68,7 +77,9 @@ namespace SenacRodaRoda
             }
          }
          botaoAtivo(btnSender);
+         ValidarRodada();
       }
+      //******************************************************************************************
       void Resetar()
       {
          X = 0;
@@ -84,7 +95,9 @@ namespace SenacRodaRoda
          ResetarTeclado();
          encontrou = false;
          currentButton = null;
+         
       }
+      //******************************************************************************************
       void ResetarTeclado()
       {
          foreach (Control botoes in pnlTeclado.Controls)
@@ -96,6 +109,7 @@ namespace SenacRodaRoda
             }
          }
       }
+      //******************************************************************************************
       void botaoAtivo(object btnSender)
       {
          if (btnSender != null)
@@ -116,8 +130,15 @@ namespace SenacRodaRoda
             }
          }
       }
-      //========================= CONTROLES ======================================================
-      private void btnNovoJogo_Click(object sender, EventArgs e)
+      void ValidarRodada()
+      {
+         if (qtdLetras == palavraSorteadaA.Length)
+         {
+            var form = new Form2(lblPlacar.Text, palavraSorteadaA);
+            form.ShowDialog();
+         }
+      }
+      void NovoJogo()
       {
          if (primeiraPalavra)
          {
@@ -128,140 +149,142 @@ namespace SenacRodaRoda
             Resetar();
             Sorteador();
          }
-
       }
+      //========================= CONTROLES ======================================================
+      private void btnNovoJogo_Click(object sender, EventArgs e)
+      {
+         NovoJogo();
+      }
+      //******************************************************************************************
       private void btnA_Click(object sender, EventArgs e)
       {
          VerificarLetra('a', sender);
       }
-
+      //******************************************************************************************
       private void btnB_Click(object sender, EventArgs e)
       {
          VerificarLetra('b', sender);
       }
-
+      //******************************************************************************************
       private void btnC_Click(object sender, EventArgs e)
       {
          VerificarLetra('c', sender);
       }
-
+      //******************************************************************************************
       private void btnD_Click(object sender, EventArgs e)
       {
          VerificarLetra('d', sender);
       }
-
+      //******************************************************************************************
       private void btnE_Click(object sender, EventArgs e)
       {
          VerificarLetra('e', sender);
       }
-
+      //******************************************************************************************
       private void btnF_Click(object sender, EventArgs e)
       {
          VerificarLetra('f', sender);
       }
-
+      //******************************************************************************************
       private void btnG_Click(object sender, EventArgs e)
       {
          VerificarLetra('g', sender);
       }
-
+      //******************************************************************************************
       private void btnH_Click(object sender, EventArgs e)
       {
          VerificarLetra('h', sender);
       }
-
+      //******************************************************************************************
       private void btnI_Click(object sender, EventArgs e)
       {
          VerificarLetra('i', sender);
       }
-
+      //******************************************************************************************
       private void btnJ_Click(object sender, EventArgs e)
       {
          VerificarLetra('j', sender);
       }
-
+      //******************************************************************************************
       private void btnK_Click(object sender, EventArgs e)
       {
          VerificarLetra('k', sender);
       }
-
+      //******************************************************************************************
       private void btnL_Click(object sender, EventArgs e)
       {
          VerificarLetra('l', sender);
       }
-
+      //******************************************************************************************
       private void btnM_Click(object sender, EventArgs e)
       {
          VerificarLetra('m', sender);
       }
-
+      //******************************************************************************************
       private void btnN_Click(object sender, EventArgs e)
       {
          VerificarLetra('n', sender);
       }
-
+      //******************************************************************************************
       private void btnO_Click(object sender, EventArgs e)
       {
          VerificarLetra('o', sender);
       }
-
+      //******************************************************************************************
       private void btnP_Click(object sender, EventArgs e)
       {
          VerificarLetra('p', sender);
       }
-
+      //******************************************************************************************
       private void btnQ_Click(object sender, EventArgs e)
       {
          VerificarLetra('q', sender);
       }
-
+      //******************************************************************************************
       private void btnR_Click(object sender, EventArgs e)
       {
          VerificarLetra('r', sender);
       }
-
+      //******************************************************************************************
       private void btnS_Click(object sender, EventArgs e)
       {
          VerificarLetra('s', sender);
       }
-
+      //******************************************************************************************
       private void btnT_Click(object sender, EventArgs e)
       {
          VerificarLetra('t', sender);
       }
-
+      //******************************************************************************************
       private void btnU_Click(object sender, EventArgs e)
       {
          VerificarLetra('u', sender);
       }
-
+      //******************************************************************************************
       private void btnV_Click(object sender, EventArgs e)
       {
          VerificarLetra('v', sender);
       }
-
+      //******************************************************************************************
       private void btnW_Click(object sender, EventArgs e)
       {
          VerificarLetra('w', sender);
       }
-
+      //******************************************************************************************
       private void btnX_Click(object sender, EventArgs e)
       {
          VerificarLetra('x', sender);
       }
-
+      //******************************************************************************************
       private void btnY_Click(object sender, EventArgs e)
       {
          VerificarLetra('y', sender);
       }
-
+      //******************************************************************************************
       private void btnZ_Click(object sender, EventArgs e)
       {
          VerificarLetra('z', sender);
       }
-
-      //------------------------------------------------------------------------------------------
-
-
+      //******************************************************************************************
    }
 }
