@@ -35,6 +35,7 @@
          this.pcbGif = new System.Windows.Forms.PictureBox();
          this.panel3 = new System.Windows.Forms.Panel();
          this.lblPalavra = new System.Windows.Forms.Label();
+         this.lblPalavra2 = new System.Windows.Forms.Label();
          this.panel1.SuspendLayout();
          ((System.ComponentModel.ISupportInitialize)(this.pcbGif)).BeginInit();
          this.panel3.SuspendLayout();
@@ -94,10 +95,11 @@
          // panel3
          // 
          this.panel3.BackColor = System.Drawing.Color.Transparent;
+         this.panel3.Controls.Add(this.lblPalavra2);
          this.panel3.Controls.Add(this.lblPalavra);
-         this.panel3.Location = new System.Drawing.Point(341, 184);
+         this.panel3.Location = new System.Drawing.Point(341, 151);
          this.panel3.Name = "panel3";
-         this.panel3.Size = new System.Drawing.Size(263, 83);
+         this.panel3.Size = new System.Drawing.Size(263, 166);
          this.panel3.TabIndex = 24;
          // 
          // lblPalavra
@@ -111,6 +113,18 @@
          this.lblPalavra.Size = new System.Drawing.Size(238, 49);
          this.lblPalavra.TabIndex = 1;
          this.lblPalavra.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+         // 
+         // lblPalavra2
+         // 
+         this.lblPalavra2.BackColor = System.Drawing.Color.Gray;
+         this.lblPalavra2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+         this.lblPalavra2.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+         this.lblPalavra2.ForeColor = System.Drawing.Color.Black;
+         this.lblPalavra2.Location = new System.Drawing.Point(12, 89);
+         this.lblPalavra2.Name = "lblPalavra2";
+         this.lblPalavra2.Size = new System.Drawing.Size(238, 49);
+         this.lblPalavra2.TabIndex = 1;
+         this.lblPalavra2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
          // 
          // frmPerdedor
          // 
@@ -139,5 +153,6 @@
       private System.Windows.Forms.PictureBox pcbGif;
       private System.Windows.Forms.Panel panel3;
       public System.Windows.Forms.Label lblPalavra;
+      public System.Windows.Forms.Label lblPalavra2;
    }
 }

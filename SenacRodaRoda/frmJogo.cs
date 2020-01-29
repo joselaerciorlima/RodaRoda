@@ -22,8 +22,7 @@ namespace SenacRodaRoda
       int X;
       int Y;
       int qtdLetras = 0;
-      const int limitErros = 3;
-      const int limitRodada = 5;
+      
       int qtdErros;
       int qtdAcertos;
       int premiacao;
@@ -34,6 +33,9 @@ namespace SenacRodaRoda
       bool primeiraPalavra = true;
       bool encontrou = false;
       bool interromperSom = false;
+
+      const int limitErros = 3;
+      const int limitRodada = 5;
 
       Button currentButton;
 
@@ -185,7 +187,7 @@ namespace SenacRodaRoda
 
             if (qtdErros == limitErros)
             {
-               var form = new frmPerdedor(palavraSorteadaA);
+               var form = new frmPerdedor(palavraSorteadaA,palavraSorteadaB);
                form.ShowDialog();
             }
          }
@@ -336,7 +338,7 @@ namespace SenacRodaRoda
          }
          if (qtdErros == limitErros)
          {
-            var form = new frmPerdedor(palavraSorteadaA);
+            var form = new frmPerdedor(palavraSorteadaA,palavraSorteadaB);
             form.ShowDialog();
          }
       }

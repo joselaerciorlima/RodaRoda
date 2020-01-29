@@ -43,14 +43,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="SenacRodaRoda.exe" size="9054208">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="SenacRodaRoda.exe" size="9046528">
       <assemblyIdentity name="SenacRodaRoda" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>+zbtMyEfxwBRN4RvQXs5ymkh2Q2nFp4hKyctjreWWOE=</dsig:DigestValue>
+        <dsig:DigestValue>8x8+l7nJRUBEE3zGF0Gle9bD2xE1PpXAIrVZzV54+uA=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

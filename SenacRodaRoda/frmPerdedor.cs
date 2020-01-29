@@ -15,10 +15,11 @@ namespace SenacRodaRoda
    {
       string localPasta;
 
-      public frmPerdedor(string palavra)
+      public frmPerdedor(string palavraA, string palavraB)
       {
          InitializeComponent();
-         lblPalavra.Text = palavra.ToUpper();
+         lblPalavra.Text = palavraA.ToUpper();
+         lblPalavra2.Text = palavraB.ToUpper();
          localPasta = Application.StartupPath + @"\..\..\..\Arquivos\Sons\";
          playSimpleSound("perdeu.wav");
       }
